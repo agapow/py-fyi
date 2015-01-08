@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: fyi
+Version: 0.1dev-r0
+Summary: 'Simple commandline notifications and logging'
+Home-page: http://www.agapow.net/software/py-fyi
+Author: Paul Agapow
+Author-email: paul@agapow.net
+License: MIT
+Description: A common need in commandline programs and scripts is notifications, informning the user of progress including errors. Ideally, the level of notification should be configurable, allowing different levels of verbosity e.g. only displaying critical messages or including debug information. The Python logging module offers a central and cpowerful mechanism for doing this, but is slightly ornate. This package provides a thin skin around the logging module, to allow for most common use cases while providing a simpler interface tfor customizing logger behaviour.
+Keywords: logging,notifications,progress
+Platform: UNKNOWN

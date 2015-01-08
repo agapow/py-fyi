@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+fyi/__init__.py
+fyi.egg-info/PKG-INFO
+fyi.egg-info/SOURCES.txt
+fyi.egg-info/dependency_links.txt
+fyi.egg-info/entry_points.txt
+fyi.egg-info/not-zip-safe
+fyi.egg-info/top_level.txt
