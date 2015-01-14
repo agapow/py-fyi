@@ -17,12 +17,18 @@ import fyi
 ### CODE ###
 
 if __name__ == '__main__':
-   arg_parser = argparse.ArgumentParser()
-   fy.add_verbosity_argument (arg_parser)
+   ap = argparse.ArgumentParser()
+   fyi.add_verbosity_argument (ap)
    clargs = sys.argv[1:]
-   args = arg_parser.parse (clargs)
+   args = ap.parse_args (clargs)
+   fyi.set_versbosity_from_arg (args.verbosity)
    
-
+   fyi.critical ('a message')
+   fyi.error ('a message')
+   fyi.warning ('a message')
+   fyi.info ('a message')
+   fyi.debug ('a message')
+   
 
 
 ### END #######################################################################
