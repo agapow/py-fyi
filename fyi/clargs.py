@@ -30,12 +30,15 @@ def add_verbosity_argument (parser):
          'NOTHING',
          'EVERYTHING',
       ],
+      default='INFO',
       help="increase output verbosity"
    )
 
 def set_versbosity_from_arg (arg, logger=None):
    if logger is None:
       logger = deflogger.get_default_logger()
+   level = utils.to_level (arg)
+   logger.setLevel (level)
    
 
 
