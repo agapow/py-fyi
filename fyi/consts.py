@@ -21,6 +21,8 @@ from logging import CRITICAL, ERROR, WARNING, INFO, DEBUG, NOTSET
 
 ### CONSTANTS & DEFINES
 
+INITED = False
+
 NOTHING = 100
 EVERYTHING = 1
 
@@ -51,4 +53,3 @@ DEFAULT_DEBUG_FMT = DEFAULT_FMT
 
 
 ### END #######################################################################
-

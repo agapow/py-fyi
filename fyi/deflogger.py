@@ -8,6 +8,8 @@ functions.
 
 ### IMPORTS
 
+import logging
+
 import utils
 import consts
 
@@ -16,7 +18,25 @@ import consts
 
 ### CODE ###
 
+def FyiLogger (logging.getLoggerClass()):
+	def __init__ (self, name=None):
+		builtin_logger_kls = logging.getLoggerClass()
+		builtin_logger_kls.__init__ (self, name)
+
+
+
+logging.setLoggerClass (FyiLogger)
+
+def check_for_root_logger():
+	"""
+	Check if root logger has been initialised and if not, do so.
+	"""
+   if not (logging.root.handlers):
+   	basicConfig()
+
+
 def get_default_logger ():
+
 	return utils.get_logger()
 
 
@@ -29,22 +49,27 @@ set_default_logger()
 
 
 def critical (msg):
+	check_for_root_logger()
    get_default_logger().critical (msg)
    
 
 def error (msg):
-   get_default_logger().error (msg)
+	check_for_root_logger()
+	get_default_logger().error (msg)
    
    
 def warning (msg):
+	check_for_root_logger()
    get_default_logger().warning (msg)
    
    
 def info (msg):
+	check_for_root_logger()
    get_default_logger().info (msg)
    
    
 def debug (msg):
+	check_for_root_logger()
    get_default_logger().debug (msg)
    
 
