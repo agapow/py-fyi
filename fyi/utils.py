@@ -18,6 +18,16 @@ import consts
 def init_fyi():
 	"""
 	Do any necessary initialisation before calling fyi.
+
+	This is necessary to ensure the sensible default behaviour of fyi, by
+	installing the default handlers if none are specified. You could question
+	what happens if the programmer doesn't want *any*
+	hanlders, but in that case:
+
+	* they wouldn't even call fyi
+	* they could always set the logging level to emit nothing
+
+
 	"""
 	pass
 
@@ -26,14 +36,11 @@ def init_default():
 	"""
 	The default handlers to set if none have been set when fyi is first called.
 
-	You could question what happens if the programmer doesn't want *any*
-	hanlders, but in that case:
 
-	* they wouldn't even call fyi
-	* they could always set the logging level to emit nothing
 
 	"""
 	pass
+
 
 def get_logger (name=None):
 	"""
